@@ -7,7 +7,6 @@ module.exports = function (options) {
 
 	var nugetPath = __dirname + "./.paket/paket.exe";
 	var monoPath = null;
-	var targetFile = nugetPath;
 	var cmdArgs = ["install"];
 
 	if (options) {
@@ -22,12 +21,13 @@ module.exports = function (options) {
 		cmdArgs.unshift(nugetPath);
 	}
 
+	var targetFile = nugetPath;
+
 	return through.obj(function (file, enc, cb) {
 		if (!file || !file.path) {
 			cb(null, file);
 			return;
 		}
-		cmdArgs.push(file.path);
 		return execFile(targetFile, cmdArgs, function (error, stdout, stderror) {
 			if (stdout.trim()) {
 				gutil.log(stdout);
