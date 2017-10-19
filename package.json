@@ -1,13 +1,13 @@
 {
-  "name": "gulp-nuget-restore",
-  "version": "0.6.0",
+  "name": "gulp-paket-restore",
+  "version": "0.1.0",
   "description": "",
   "license": "MIT",
-  "repository": "tparnell8/gulp-nuget-restore",
+  "repository": "nospamas/gulp-paket-restore",
   "author": {
-    "name": "Tommy Parnell",
-    "email": "tparnell8@gmail.com",
-    "url": "https://github.com/tparnell8"
+    "name": "John Sampson",
+    "email": "jnospamas@gmail.com",
+    "url": "https://github.com/nospamas"
   },
   "engines": {
     "node": ">=4.2.6"
